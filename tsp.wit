@@ -1,0 +1,13 @@
+record destinations {
+  destination: string
+}
+
+record to-update-points {
+  point: string,
+  existing-index: s32
+}
+
+tsp-of: func(geo: list<destinations>, exp: s32) -> list<string>
+
+tsp-update: func(to-update-vec: list<to-update-points>, existing-paths: list<string>) -> list<string>
+

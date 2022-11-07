@@ -1,0 +1,18 @@
+[package]
+name = "tsp"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+wit-bindgen-rust = { git = "https://github.com/bytecodealliance/wit-bindgen.git", rev = "60e3c5b41e616fee239304d92128e117dd9be0a7" }
+travelling_salesman = { path = "travelling_salesman", version = "1.1.22" } 
+time = "0.3.15"
+rkm = { git = "https://github.com/second-state/wasm-learning-deps-rkm" }
+ndarray = { version = "0.13.0", features = ["serde"] }
+geo-types = "0.7.7"
+wkt = "0.10.3"
+
+[lib]
+crate-type = ["cdylib"]

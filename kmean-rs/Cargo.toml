@@ -1,0 +1,36 @@
+[package]
+name = "kmeans"
+version = "0.2.0"
+authors = ["Markus Ebner <hiwatari.seiji@gmail.com>"]
+edition = "2018"
+description = "Small and fast library for k-means clustering calculations."
+repository = "https://github.com/seijikun/kmean-rs"
+readme = "README.md"
+license = "Apache-2.0"
+keywords = ["kmeans", "k-means", "means", "cluster", "clustering"]
+categories = ["algorithms", "science"]
+exclude = ["examples/*"]
+
+[dependencies]
+packed_simd = { version = "0.3.4", package = "packed_simd_2" }
+wasm-bindgen = "0.2.74"
+rayon = "1.5"
+rand = "0.7"
+num = "0.3"
+wasm-bindgen-rayon = "1.0"
+
+[lib]
+name = "kmeans"
+path = "src/lib.rs"
+
+[[example]]
+name = "lloyd"
+path = "examples/lloyd.rs"
+
+[[example]]
+name = "minibatch"
+path = "examples/minibatch.rs"
+
+[[example]]
+name = "status_events"
+path = "examples/status_events.rs"
